@@ -1,0 +1,43 @@
+#include <stdio.h>
+int main() {  
+	int denn, mesn, rokn, krc, rnk;
+	char pohl;
+
+	printf("Napis den sveho narozeni:");
+	scanf_s("%d", &denn);
+
+	printf("Napis mesic sveho narozeni:");
+	scanf_s("%d", &mesn);
+
+	printf("Napis rok sveho narozeni:");
+	scanf_s("%d", &rokn);
+
+	printf("Napis sve pohlavi (M)uzske, nebo (Z)enske:");
+	scanf_s(" %c", &pohl);
+
+	switch (pohl) {
+		case 'M':
+			break;
+		case 'Z':
+			mesn = mesn + 50;
+			break;
+		default: 
+			printf("Uvedte spravne pohlavi.");
+			return 1;
+	}
+
+
+	printf("Napis koncovku(4) sveho rodneho cisla:");
+	scanf_s("%d", &krc);
+
+	rnk = rokn % 100;
+	if (rnk >= 10){
+
+	printf("Tvoje rodne cislo je: %d%d%d/%d", rnk,mesn,denn,krc);
+	}
+	else {
+		printf("Tvoje rodne cislo je: 0%d%d%d/%d", rnk, mesn, denn, krc);
+	}
+
+	return 0;
+}
