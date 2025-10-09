@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(NULL));
+    int cis;
+    int pocp = 0;
+    int rcis = rand() % 101;
+    
+    printf("Zadej libovolne cislo od 0 do 100:");
+    scanf_s("%d", &cis);
+  
+  while (cis != rcis) {
+   if (cis < rcis) {
+       printf("Hadas nizko.\n");
+       printf("Zadej dalsi:");
+   }
+   else if (cis > rcis) {
+       printf("Hadas vysoko.\n");
+       printf("Zadej dalsi:");
+   }
+   scanf_s("%d", &cis);
+   pocp = pocp + 1;
+  }
+  printf("Tys odhadl cislo.\n");
+  printf("Pocet pokusu: %d \n", pocp);
+
+    return 0;
+}
