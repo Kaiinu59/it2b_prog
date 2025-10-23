@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int main() {
+srand(time(NULL));
+int kost1, kost2;
+int pokus = 1;
+
+kost1 = rand() % 7;
+kost2 = rand() % 7;
+printf("Results: %d : %d\n", kost1, kost2);
+
+while (kost1 != kost2) {
+    kost1 = rand() % 7;
+    kost1 = rand() % 7;
+    printf("Results: %d : %d\n", kost1, kost2);
+    pokus += 1;
+  }
+
+printf("Pocet pokusu: %d", pokus);
+
+return 0;
+}

@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main() {
+  srand(time(NULL));
+  int sprod = 3;
+  int arr[3];
+  int arr1[3];
+
+  for (int i = 0; i < 3; i++) {
+    arr[i] = rand() % 101;
+    printf("Sqrt(arr[i]) = ...?");
+    scanf("%d", &arr1[i]);
+    if (arr1[i] != arr[i]) {
+      printf("Chyba");
+      sprod -= 1;
+    }
+  }
+
+
+
+
+
+
+  return 0;
+}

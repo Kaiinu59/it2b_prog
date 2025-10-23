@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int main() {
+  srand(time(NULL));
+  int arr[10];
+  int soucet = 0;
+  int bodmrz = 0;
+
+  for (int i = 0; i < 10; i++) {
+    arr[i] = rand() % 21 - 10;
+    printf("%d. teplota pri mereni: %d\n", i + 1, arr[i]);
+    if (arr[i] < 0) {
+      bodmrz += 1;
+    }
+  }
+  for (int i = 0; i < 10; i++) {
+    soucet += arr[i];
+  }
+  float prum = (float) soucet / 10;
+  printf ("Prumerna teplota = %.2f:\n", prum);
+  printf ("Pocet mereni pod bodem mrazu: %d\n", bodmrz);
+  return 0;
+}
