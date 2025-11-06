@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	char word[101];
+	int cou = 0;
+
+	printf("Zadej libovolne slovo:\n");
+	scanf(" %100s", word);
+
+	int len = strlen(word);
+
+	for(int i = 0; i < len; i++) {
+		if(word[i] == 'a'|| word[i] =='i'|| word[i] =='u'|| word[i] =='e'|| word[i] =='o'|| word[i] =='y') {
+			cou += 1;
+		}
+	}
+	printf("Pocet malych somohlasek ve slove \"%s\": %d", word, cou);
+
+	return 0;
+}

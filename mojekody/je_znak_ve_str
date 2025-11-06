@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+
+int main() {
+	char str[] = "Hello";
+	char ans;
+
+	printf("Zadej libovolny znak:\n");
+	scanf(" %c", &ans);
+
+	for(int i = 0; i < 6; i++) {
+		if(str[i] == ans) {
+			printf("Znak JE \n");
+			return 0;
+		}
+		else {
+			printf("Znak NENI\n");
+		}
+
+
+	}
+
+	return 0;
+}
