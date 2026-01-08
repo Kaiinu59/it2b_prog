@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+int main() {
+	int sec, min, hour;
+	int Leftsec = 0;
+	int Leftmin = 0;
+	int Lefthour = 0;
+
+	printf("Zadej aktualni cas(sec):");
+	scanf("%d", sec);
+	if (sec > 60) {
+		printf("Chybny aktualni cas:");
+		return 0;
+	}
+	printf("Zadej aktualni cas(min):");
+	scanf("%d", min);
+	if (min > 60) {
+		printf("Chybny aktualni cas:");
+		return 0;
+	}
+	printf("Zadej aktualni cas(hour):");
+	scanf("%d", hour);
+	if (hour > 24) {
+		printf("Chybny aktualni cas:");
+		return 0;
+	}
+
+	int Actualtime = (hour * 3600) +  (min * 60) + (sec);
+	int Lefttime = (24 * 3600) - Actualtime;
+
+	while (Lefttime != 0) {
+		if (Lefttime >= 3600) {
+			Lefttime - 3600;
+			Lefthour++;
+		} else if (Lefttime >= 60) {
+			Lefttime - 60;
+			Leftmin++;
+		} else if (Lefttime >= 1) {
+			Lefttime - 1;
+			Leftsec++;
+		}
+	}
+	printf("Do NY zbyva %d:%d:%d", Lefthour,  Leftmin, Leftsec);
+
+	return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+
+	printf("Zadej aktualni cas(sec):");
+	scanf("%d", sec);
+	if (sec > 60) {
+		printf("Chybny aktualni cas:");
+		return 0;
+	}
+	printf("Zadej aktualni cas(min):");
+	scanf("%d", min);
+	if (min > 60) {
+		printf("Chybny aktualni cas:");
+		return 0;
+	}
+	printf("Zadej aktualni cas(hour):");
+	scanf("%d", hour);
+	if (hour > 24) {
+		printf("Chybny aktualni cas:");
+		return 0;
+	}
+
+	int Actualtime = (hour * 3600) +  (min * 60) + (sec);
+	int Left time = Actualtime - (hour * 3600) - (min * 60) - sec;
+	printf("Do NY zbyva %d:%d:%d", Lefthour,  Leftmin, Leftsec);
+
+	return 0;
+}

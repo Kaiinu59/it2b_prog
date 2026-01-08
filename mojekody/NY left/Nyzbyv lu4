@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+	int sec, min, hour;
+	printf("Zadej aktualni cas(hodiny):");
+	scanf("%d", &hour);
+	if (hour > 24) {
+		printf("Chybny aktualni cas.");
+		return 0;
+	}
+	printf("Zadej aktualni cas(minuty):");
+	scanf("%d", &min);
+	if (min > 60) {
+		printf("Chybny aktualni cas.");
+		return 0;
+	}
+	printf("Zadej aktualni cas(sekundy):");
+	scanf("%d", &sec);
+	if (sec > 60) {
+		printf("Chybny aktualni cas.");
+		return 0;
+	}
+
+    if (min > 0) 
+        hour - 1;
+    if (sec > 0) 
+        hour =- 1;
+	int Lefthour = 24 - hour;
+	int Leftmin = 60 - min;
+	int Leftsec = 60 - sec;
+	printf("Do NR zbyva %d:%d:%d", Lefthour,  Leftmin, Leftsec);
+
+	return 0;
+}
