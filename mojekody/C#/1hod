@@ -1,0 +1,89 @@
+{
+    Console.WriteLine("Napis prvni cislo: ");
+    int a = int.Parse(Console.ReadLine());
+    Console.WriteLine("Napis druhe cislo: ");
+    int b = int.Parse(Console.ReadLine());
+    Console.WriteLine("Hello, World!");
+
+    int soucet = a + b;
+    Console.WriteLine("Soucet je: " + soucet);
+}
+
+
+
+
+{
+    Console.WriteLine("Zadej pocet prednasek: ");
+    int pred = int.Parse(Console.ReadLine());
+    Console.WriteLine("Zadej pocet seminaru: ");
+    int semin = int.Parse(Console.ReadLine());
+    Console.WriteLine("Zadej hodinovou mzdu: ");
+    int hodm = int.Parse(Console.ReadLine());
+
+    int celk = (pred * 2 + semin) * hodm;
+    Console.WriteLine("Celkova mzda je: " + celk +  "Kc");
+
+}
+
+
+{
+    Console.WriteLine("Zadej celkovy pocet nohou zvirat: ");
+    int celkovyPocetNohou = int.Parse(Console.ReadLine());
+    Console.WriteLine("Zadej pocet prasat: ");
+    int pocetPrasat = int.Parse(Console.ReadLine());
+    int pocetKureciNohou = celkovyPocetNohou - (pocetPrasat * 4);
+    int pocetKureci = pocetKureciNohou / 2;
+    if (pocetKureciNohou % 2 == 0)
+    {
+        Console.WriteLine("Pocet kureci je: " + pocetKureci);
+    }
+    else
+    {
+        Console.WriteLine("Existuje mutanta");
+    }
+}
+
+
+
+
+
+{
+    //Kalkulacka
+    Console.WriteLine("Zadej 1 cislo: ");
+    int cislo1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Zadej 2 cislo: ");
+    int cislo2 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Zadej operaci (+, -, *, /): ");
+    char znak = char.Parse(Console.ReadLine());
+
+    switch (znak)
+    {
+        case '+':
+            Console.WriteLine("Vysledek: " + (cislo1 + cislo2));
+            break;
+        case '-':
+            Console.WriteLine("Vysledek: " + (cislo1 - cislo2));
+            break;
+        case '*':
+            Console.WriteLine("Vysledek: " + (cislo1 * cislo2));
+            break;
+        case '/':
+            if (cislo2 != 0)
+            {
+                Console.WriteLine("Vysledek: " + (cislo1 / cislo2));
+            }
+            else
+            {
+                Console.WriteLine("Chyba: Deleni nulou neni povoleno.");
+            }
+            break;
+        default:
+            Console.WriteLine("Neplatna operace.");
+            break;
+    }
+
+
+
+
+
+}
