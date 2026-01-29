@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+
+    static void Main()
+    {
+        Console.Write("Zadej cislo: ");
+        string Num = Console.ReadLine();
+        int Sum = 0;
+        for (int i = 0; i < Num.Length; i++)
+        {
+        Sum += Num[i];
+        }
+        Console.WriteLine($"Soucet cifer cisla: {Sum}");
+
+    }
+}

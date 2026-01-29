@@ -1,0 +1,34 @@
+using System;
+class Program
+{
+    static int NSD(int PCNSD, int DCNSD)
+    {
+        PCNSD = Math.Abs(PCNSD);
+        DCNSD = Math.Abs(DCNSD);
+        while (DCNSD != 0)
+        {
+            int zbytek = PCNSD % DCNSD;
+            PCNSD = DCNSD;
+            DCNSD = zbytek;
+        }
+        return PCNSD;
+    }
+
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Zadej prvni cislo: ");
+            int prvnicislo = int.Parse(Console.ReadLine());
+            Console.Write("Zadej druhy cislo: ");
+            int druhecislo = int.Parse(Console.ReadLine());
+            int vysledek = NSD(prvnicislo, druhecislo);
+
+            Console.WriteLine($"NSD {prvnicislo}, {druhecislo} = {vysledek}");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Chyba: Zadejte prosím celá čísla!");
+        }
+    }
+}
