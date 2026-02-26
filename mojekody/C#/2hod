@@ -1,0 +1,9 @@
+/* bool sude = true;
+
+ while (sude) {
+     Console.Write($"Zadej sude cislo: ");
+     int cislo = int.Parse(Console.ReadLine());
+
+     if (cislo % 2 == 0) 
+         sude = false;
+ }*/

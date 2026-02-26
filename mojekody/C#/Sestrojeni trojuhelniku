@@ -1,0 +1,22 @@
+using System;
+class Program{
+    static bool CheckTriangle(double a, double b, double c)
+    {
+        return a + b > c && a + c > b && b + c > a;    
+    }
+
+    static void Main()
+    {
+        Console.Write($"Zadej 1. stranu trojuhekniku: ");
+        double firstside = double.Parse(Console.ReadLine());
+        Console.Write($"Zadej 2. stranu trojuhekniku: ");
+        double secondside = double.Parse(Console.ReadLine());
+        Console.Write($"Zadej 3. stranu trojuhekniku: ");
+        double thirdside = double.Parse(Console.ReadLine());
+
+        if (CheckTriangle(firstside, secondside, thirdside))
+            Console.WriteLine($"Trojuhelik se da sestrojit.");
+        else
+            Console.WriteLine($"Trojuhelik se neda sestrojit.");
+    }
+}
