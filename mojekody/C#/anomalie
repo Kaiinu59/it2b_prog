@@ -1,0 +1,35 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        {
+            double anomalie = 0;
+            double [] array = new double[10];
+            Console.WriteLine("Zadej 10 cisel!");
+            for(int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"Zadej {i + 1}. cislo: ");
+                array[i] = double.Parse(Console.ReadLine());
+            }
+            for (int i = 1; i < array.Length-1; i++)
+            {
+               if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                {
+                    Console.WriteLine($"{array[i]}");
+                    anomalie++;
+                }
+                else if (array[i] < array[i - 1] && array[i] < array[i + 1])
+                {
+                    Console.WriteLine($"{array[i]}");
+                    anomalie++;
+                }
+           
+            }
+            Console.WriteLine($"Pocet anomalii: {anomalie}");
+
+
+
+        }
+    }
+}

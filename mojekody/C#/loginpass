@@ -1,0 +1,29 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        string Login = "admin";
+        string Password = "admin";
+        string Massage = "happy massage";
+
+        Console.Write("Enter login:");
+        string userLogin = Console.ReadLine();
+        Console.Write("Enter password:");
+        string userPassword = Console.ReadLine();
+
+        if (userLogin == Login && userPassword == Password)
+        {
+            Console.WriteLine("Access granted. Enjoy your massage!");
+            Console.WriteLine(Massage);
+        }
+        else
+        {
+            Console.WriteLine("Access denied. Incorrect login or password.");
+        }
+
+
+
+
+    }
+}
