@@ -1,0 +1,54 @@
+using System;
+class Program
+{
+    static bool ValidEmail(string email)
+    {
+        int atCount = 0;
+        bool dotAfterAt = false;
+
+        if (email[0] == '@')
+        {
+            return false;
+        }
+
+        for (int i = 0; i < email.Length; i++)
+        {
+            if (email[i] == '@')
+            {
+                atCount++;
+
+                for (int j = i + 1; j < email.Length; j++)
+                {
+                    if (email[j] == '.')
+                    {
+                        dotAfterAt = true;
+                        break;
+                    }
+                }
+
+            }
+            if (atCount <= 1)
+            {
+                return false;
+            }
+        }
+        if (dotAfterAt == false)
+            return false;
+
+
+        return true;
+        }
+
+
+
+
+
+        static void Main()
+        {
+            string email = Console.ReadLine();
+            if (ValidEmail(email))
+                Console.WriteLine("Valid email");
+            else
+                Console.WriteLine("Invalid email");
+        }
+    }
