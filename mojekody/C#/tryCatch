@@ -1,0 +1,15 @@
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            Console.WriteLine("Vyber jedno cislo a napis ho");
+            int num = int.Parse(Console.ReadLine());
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Pouze cisla");
+        }
+    }
+}
