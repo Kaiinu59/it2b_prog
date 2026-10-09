@@ -1,0 +1,33 @@
+class Geometrie
+{
+
+    public void Obsah (int strana)
+    {
+        strana = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Obsah ctvce: {strana*strana}");
+    }
+
+    public void Obsah (int strana1, int strana2)
+    {
+        strana1 = int.Parse(Console.ReadLine());
+        strana2 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Obsah obdelniku: {strana1*strana2}");
+    }
+
+    public void Obsah (int strana1, int strana2, int strana3)
+    {
+        strana1 = int.Parse(Console.ReadLine());
+        strana2 = int.Parse(Console.ReadLine());
+        strana3 = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Obsah plochy kvadru: {2*(strana1*strana2 + strana2*strana3 + strana1*strana3)}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine($"Zadej hodnoty: ");
+        Geometrie.Obsah();
+    }
+}

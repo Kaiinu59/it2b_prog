@@ -1,0 +1,54 @@
+//Object
+class Object
+{
+    public int Price { get; set; }
+    public string Popis { get; set; }
+
+    public Object(string popis, int price)
+    {
+        Price = price;
+        Popis = popis;
+    }
+}
+//Dum
+class Dum : Object
+{
+    public int PocetPater { get; set; }
+    public bool Zahrada { get; set; }
+
+
+    public Dum(string popis, int price,int pocetPater, bool zahrada) : base(popis, price)
+    {
+        PocetPater = pocetPater;
+        Zahrada = zahrada;
+    }
+
+
+    public void VypisInfo()
+    {
+        Console.WriteLine($"Cena: {Price}\n PocetPater: {PocetPater}\n Zahrada: {Zahrada}\n Popis: {Popis}\n");
+    }
+}
+//Byt
+class Byt : Object
+{
+    public int Patro { get; set; }
+    public Byt(string popis, int price, int patro) : base(popis, price) { }
+
+
+    public Byt(string popis, int price, int patro) : base(popis, price)
+    {
+        Patro = patro;
+    }
+
+
+    public void VypisInfo()
+    {
+        Console.WriteLine($"Cena: {Price}\n Patro: {Patro}\n Popis: {Popis}\n");
+    }
+}
+//Program
+class Program
+{
+    void Main
+}
