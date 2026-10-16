@@ -1,0 +1,57 @@
+//Player 
+class Player
+{
+    public int HP = 100;
+    public int MoneyCount = 20;
+
+    public Player() { }
+
+    public void ShowHP()
+    {
+        Console.WriteLine($"Your HP: {HP}");
+
+    }
+}
+//Methods
+class Methods
+{
+    public virtual void Activate(Player player)
+    {
+        Console.WriteLine($"[Nic se nestalo]");
+    }
+}
+//MetFontain
+class MetFontain : Methods
+{
+    public override void Activate(Player player)
+    {
+        if (player.MoneyCount <= 20)
+        {
+            Console.WriteLine($"Fontain was activated, your hp has been increased by 25!");
+            player.MoneyCount -= 20;
+            player.HP += 20;
+            Console.WriteLine($"You lost 20 coins, your current balance: {player.MoneyCount}");
+        }
+        else
+        {
+            Console.WriteLine($"Fontain wasn`t activated, keep walking.");
+            player.MoneyCount += 5;
+            Console.WriteLine($"Your balance has been increased by 5, your current balance: {player.MoneyCount}");
+        }
+    }
+        
+}
+//Player 
+class Program
+{
+    static void Main()
+    {
+
+        Player player = new Player();
+        player.ShowHP();
+
+        while (true) { }
+
+
+    }
+}
