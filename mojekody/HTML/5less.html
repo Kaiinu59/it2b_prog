@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>5less</title>
+</head>
+<style>
+    body {
+        margin-left: 200px;
+        margin-right: 200px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        background-color: #000000;
+    }
+    a{
+        size: 30px;
+        text-decoration: none;
+    }
+    p {
+        color: #ffffff;
+        text-align: justify;
+    }
+    h1 {
+        background-color: #0066CC;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 10px;
+    }
+    .menu {
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+        color: #0066CC;
+    }
+    ol {
+        color: #ffffff;
+    }
+    ul {
+        color: #ffffff;
+    }
+    h2 {
+        color: #0066CC;
+        border-bottom: #0066CC solid 2px;
+        margin-top: 40px;
+    }
+    h3 {
+        color: #0066CC;
+    }
+    press {
+        color: #edf6ff63;
+        text-decoration: none;
+    }
+    press:hover {
+        color: #ffffff;
+        text-decoration:line-through;
+        text-shadow: #ffffff 30px 30px 3px;
+        } 
+    press1 {
+        color: #edf6ff63;
+        text-decoration: none;
+    }
+    press1:hover {
+        color: #0e00cc;
+        text-decoration:line-through;
+        text-shadow: #2507a8 30px 30px 3px;
+        } 
+    press2 {
+        color: #edf6ff63;
+        text-decoration: none;
+    }
+    press2:hover {
+        color: #c50000;
+        text-decoration:line-through;
+        text-shadow: #fc1111 30px 30px 5px;
+        }
+        
+    
+</style>
+<body>
+
+    <div class="header">
+        <h1 id="zacatek">Průvodce Prahou</h1>
+        <p>Vitejte na jednoduché stránce věnované hlavnímu městu České republiky. Na této stránce najdete informace o Praze, zajímavá místa a seznam památek.</p>
+        <p class="menu"><a href="#pamatky"><press1>Památky</press1></a> | <a href="#navstevnost"> <press2>Návštěvnost památek</press2> </a> | <a href="#entity"><press>Znákové entity</press></a></p>
+    </div>
+ 
+    <h2>O Praze</h2>
+    <p>Praha je hlavní město České republiky. <br>
+    Leží na řece Vltavě.<br>
+    Patří mezi nejnavštěvovanější města v Evropě.</p>
+    <p>Historické centrum města je zapsáno na seznamu UNESCO.</p>
+    <h2 id="pamatky">Nejznámější památky</h2>
+    <h3>Seznam památek</h3>
+    <ul>
+        <li>Pražský hrad</li>
+        <li>Karlův most</li>
+        <li>Staroměstské náměstí</li>
+        <li>Petřínská rozhledna</li>
+    </ul>
+    <h3>Doporučené pořadí návštěvy</h3>
+    <ol>
+        <li>Pražský hrad</li>
+        <li>Karlův most</li>
+        <li>Staroměstské náměstí</li>
+        <li>Petřínská rozhledna</li>
+    </ol>
+    <h3>Výklad pojmů</h3>
+    <dl>
+        <strong><dt>Pražský hrad</dt></strong>
+        <dd>Největší hradní komplex v České republice.</dd>
+        <strong><dt>Karlův most</dt></strong>
+        <dd>Historický kamenný most přes Vltavu.</dd>
+        <strong><dt>Orloj</dt></strong>
+        <dd>Středověké astronomické hodiny na Staroměstské radnici.</dd>
+    </dl>
+ 
+    <hr>
+ 
+    <h2>Fotogalerie</h2>
+    <p>Pražský hrad:</p>
+    <img src="https://www.hrad.cz/file/edee/public/2015/09/svatyvit-20150923-141241.jpg" alt="Pražský hrad" title="Pražský hrad" width="600px">
+    <p>Více naleznete na <a href="https://prague.eu/cs/">oficiálním turistickém portálu Prahy</a>.</p>
+ 
+    <hr>
+ 
+    <h2 id="navstevnost">Návštěvnost památek (v tisících návštěvníků)</h2>
+    <table border="1px">
+        <tr>
+            <th rowspan="2">Památka</th>
+            <th colspan="2">Rok 2023</th>
+            <th colspan="2">Rok 2024</th>
+        </tr>
+        <tr>
+            <th>1. pololetí</th>
+            <th>2. pololetí</th>
+            <th>1. pololetí</th>
+            <th>2. pololetí</th>
+        </tr>
+        <tr>
+            <td>Pražský hrad</td>
+            <td>800</td>
+            <td>950</td>
+            <td>850</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>Karlův most</td>
+            <td>700</td>
+            <td>850</td>
+            <td>750</td>
+            <td>900</td>
+        </tr>
+        <tr>
+            <td>Petřínská rozhledna</td>
+            <td>300</td>
+            <td>400</td>
+            <td>350</td>
+            <td>450</td>
+        </tr>
+    </table>
+ 
+    <hr>
+ 
+    <h2 id="entity">Znakové entity</h2>
+    <p>
+        Symbol menší než: &lt;<br>
+        Symbol větší než: &gt;  <br>
+        Znak ampersand: &amp;    <br>
+        Copyright: &copy;  <br>
+        Euro: &euro;  <br>
+        Pevná mezera:&nbsp;Praha&nbsp;1
+    </p>
+    <hr>
+    <h2>Konec stránky</h2>
+    <p>Děkujeme za návštěvu této ukázkové stránky o Praze.</p>
+    <p><a href="#zacatek">Zpět na začátek stránky</a></p>
+ 
+ 
+ 
+ 
+ 
+ <br><br><br><br><br><br><br>
+
+ <P id="back"><a href="#Rossiya"><press>Rossiya</press></a> | <a href="#Putin"><press1>Putin</press1></a> | <a href="#Pobeda"><press2>Pobeda</press2></a></P>
+ <br><br><br><br><br><br><br>
+ <img src="https://th.bing.com/th/id/OIP.KQeQ3hMyk3T-_-gOBBXJaAHaEK?w=295&h=180&c=7&r=0&o=7&pid=1.7&rm=3" width="200" id="Rossiya">
+ <a href="#back">Sukaaa</a>
+ <br><br><br><br><br><br><br>
+ <img src="https://th.bing.com/th/id/OIP.B5f0gyax5MlcIMMpVY7_8AHaKT?w=132&h=181&c=7&r=0&o=7&pid=1.7&rm=3" width="200" id="Putin">
+ <a href="#back">Sukaaa</a>
+ <br><br><br><br><br><br><br>
+ <img src="https://th.bing.com/th/id/OIP.zva60KEH2vYyZOTMmWcCRgHaDt?w=333&h=175&c=7&r=0&o=7&pid=1.7&rm=3" width="200" id="Pobeda">
+ <a href="#back">Sukaaa</a>
+</body>
+</html>
