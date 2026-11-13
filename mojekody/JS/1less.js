@@ -40,5 +40,60 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+<style>
+body{
+background-color:azure;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+    color: cadetblue;
+    border-bottom: 3px solid cadetblue;
+    border-top: 3px solid cadetblue;
+    border-radius: 8px;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+p{
+    color: cadetblue;
+    font-size: 10pt;
+}
+input{
+    color: cadetblue;
+    background-color: blanchedalmond;
+    border-color: cadetblue;
+}
 
+</style>
+<body>
+    
+<h2>
+    First lesson
+</h2>
+
+<script>
+    let word;
+    let secretword = "fear";
+    do {
+        word = prompt("Write the word: ");
+    } while (secretword != word);
+</script>
+<form name="form">
+    <p>
+        Write number: <input type="number" id="c">
+        <input type="button" value="Find" onclick="Find()">
+    </p>
+</form>
+<script>
+    function Find(){
+        let c = document.f1.c.value
+        if (c % 2 == 0) {
+            alert("Number is even.")
+        }
+        else {
+            alert("Number is odd")
+        }
+    }
+</script>
+
+</body>
 
