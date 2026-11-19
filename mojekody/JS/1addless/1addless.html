@@ -1,0 +1,33 @@
+<style>
+
+body{
+    background-color:bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: darkslategray;
+}
+#num, #firbutt, #secbutt{
+    color: darkslategray;
+    background-color: burlywood;
+    height: 36px;
+    width: 128px;
+}
+
+
+</style>
+<body>
+    <script>
+        let audio = new Audio();
+        audio.src = "music.mp3";
+        audio.preload = "auto";
+    </script>
+
+
+
+<form class="fom">
+    <p>
+        Zadej cislo: <input type="number" id="num" value="1">
+        <input type="button" value="PlasticTree" onclick="PlasticTree()" id="firbutt">
+        <input type="button" value="Stop it!" onclick="pauseMusic()" id="secbutt">
+    </p>
+</form>
