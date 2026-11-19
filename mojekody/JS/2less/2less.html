@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color:azure;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h2{
+        color: cadetblue;
+        border-bottom: 3px solid cadetblue;
+        border-top: 3px solid cadetblue;
+        border-radius: 8px;
+        text-align: center;
+        background-color: blanchedalmond;
+    }
+    p{
+        color: cadetblue;
+        font-size: 10pt;
+    }
+    input{
+        color: cadetblue;
+        background-color: blanchedalmond;
+        border-color: cadetblue;
+
+        
+    }
+    img{
+        height: 20%;
+        width: 20%;
+    }
+    
+    </style>
+<body>
+    <h2>
+        Second lesson
+    </h2>
+
+    <form name="form">
+        <p>
+            Write number: <input type="number" id="c">
+            <input type="button" value="Find" onclick="Find()">
+        </p>
+    </form>
+
+    <script>
+        function Find(){
+            let c = document.getElementById("c").value 
+            if (c < 0) {c = c * (-1)}
+
+            if (c == 0) {
+                alert("Number equal zero.")
+            }
+            else if(c % 2 == 0) {
+                alert("Number is even.")
+            }
+            else {
+                alert("Number is odd")
+            }
+        }
+    </script>
+
+ <img src="https://png.pngtree.com/png-clipart/20250108/original/pngtree-trendy-laughing-emoji-png-image_18965264.png" id="funny" onchange="change">
+ <button> 
+
+ </button>
+
+<script>
+    while (0 != 2) {
+        
+    }
+</script>
+ 
+</body>
+</html>

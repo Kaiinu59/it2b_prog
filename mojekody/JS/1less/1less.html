@@ -86,7 +86,10 @@ input{
 <script>
     function Find(){
         let c = document.f1.c.value
-        if (c % 2 == 0) {
+        if (c == 0) {
+            alert("Number equal zero.")
+        }
+        else if(c % 2 == 0) {
             alert("Number is even.")
         }
         else {
